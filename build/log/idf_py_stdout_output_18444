@@ -1,0 +1,35 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\VScode\Learn\esp-idf\mini-project\mini-project\build\bootloader\esp-idf\esptool_py && c:\esp\tools\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/VScode/Learn/esp-idf/mini-project/mini-project/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6720 bytes. 0x8e0 bytes (8%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ble_app.c.obj
+D:/VScode/Learn/esp-idf/mini-project/mini-project/main/ble_app.c: In function 'device_write':
+D:/VScode/Learn/esp-idf/mini-project/mini-project/main/ble_app.c:29:13: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+   29 |     strncpy(BLE_Data,(const char *) ctxt->om->om_data, ctxt->om->om_len);
+      |             ^~~~~~~~
+      |             |
+      |             char **
+In file included from C:/esp/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:25,
+                 from C:/esp/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:53,
+                 from C:/esp/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h:34,
+                 from C:/esp/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:32,
+                 from C:/esp/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble_hci_trans.h:24,
+                 from C:/esp/esp-idf/components/bt/host/nimble/esp-hci/include/esp_nimble_hci.h:10,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/ble_app.c:1:
+c:\esp\tools\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'char **'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+D:/VScode/Learn/esp-idf/mini-project/mini-project/main/ble_app.c: In function 'getdataBLE':
+D:/VScode/Learn/esp-idf/mini-project/mini-project/main/ble_app.c:136:12: warning: returning 'char **' from a function with return type 'uint8_t' {aka 'unsigned char'} makes integer from pointer without a cast [-Wint-conversion]
+  136 |     return BLE_Data;
+      |            ^~~~~~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable mini-project.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/VScode/Learn/esp-idf/mini-project/mini-project/build/mini-project.bin
+[7/7] cmd.exe /C "cd /D D:\VScode\Learn\esp-idf\mini-project\mini-project\build\esp-idf\esptool_py && c:\esp\tools\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/VScode/Learn/esp-idf/mini-project/mini-project/build/partition_table/partition-table.bin D:/VScode/Learn/esp-idf/mini-project/mini-project/build/mini-project.bin"
+mini-project.bin binary size 0x85db0 bytes. Smallest app partition is 0x100000 bytes. 0x7a250 bytes (48%) free.

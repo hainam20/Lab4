@@ -1,0 +1,1 @@
+C:\Users\Asus\AppData\Local\Temp\confgen_tmpnn277v9a:352: warning: '1' is not a valid value for the bool symbol BT_ENABLED (defined at C:/esp/esp-idf/components/bt/Kconfig:4). Assignment ignored.

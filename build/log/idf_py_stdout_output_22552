@@ -1,0 +1,953 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\VScode\Learn\esp-idf\mini-project\mini-project\build\bootloader\esp-idf\esptool_py && c:\esp\tools\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/VScode/Learn/esp-idf/mini-project/mini-project/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6720 bytes. 0x8e0 bytes (8%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+ccache C:\esp\tools\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DUNITY_INCLUDE_CONFIG_H -ID:/VScode/Learn/esp-idf/mini-project/mini-project/build/config -ID:/VScode/Learn/esp-idf/mini-project/mini-project/main -IC:/esp/esp-idf/components/newlib/platform_include -IC:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -IC:/esp/esp-idf/components/freertos/esp_additions/include/freertos -IC:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/esp/esp-idf/components/freertos/esp_additions/include -IC:/esp/esp-idf/components/esp_hw_support/include -IC:/esp/esp-idf/components/esp_hw_support/include/soc -IC:/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -IC:/esp/esp-idf/components/esp_hw_support/port/esp32/. -IC:/esp/esp-idf/components/esp_hw_support/port/esp32/private_include -IC:/esp/esp-idf/components/heap/include -IC:/esp/esp-idf/components/log/include -IC:/esp/esp-idf/components/soc/include -IC:/esp/esp-idf/components/soc/esp32/. -IC:/esp/esp-idf/components/soc/esp32/include -IC:/esp/esp-idf/components/hal/esp32/include -IC:/esp/esp-idf/components/hal/include -IC:/esp/esp-idf/components/hal/platform_port/include -IC:/esp/esp-idf/components/esp_rom/include -IC:/esp/esp-idf/components/esp_rom/include/esp32 -IC:/esp/esp-idf/components/esp_rom/esp32 -IC:/esp/esp-idf/components/esp_common/include -IC:/esp/esp-idf/components/esp_system/include -IC:/esp/esp-idf/components/esp_system/port/soc -IC:/esp/esp-idf/components/esp_system/port/include/private -IC:/esp/esp-idf/components/xtensa/include -IC:/esp/esp-idf/components/xtensa/esp32/include -IC:/esp/esp-idf/components/lwip/include -IC:/esp/esp-idf/components/lwip/include/apps -IC:/esp/esp-idf/components/lwip/include/apps/sntp -IC:/esp/esp-idf/components/lwip/lwip/src/include -IC:/esp/esp-idf/components/lwip/port/esp32/include -IC:/esp/esp-idf/components/lwip/port/esp32/include/arch -IC:/esp/esp-idf/components/esp_ringbuf/include -IC:/esp/esp-idf/components/efuse/include -IC:/esp/esp-idf/components/efuse/esp32/include -IC:/esp/esp-idf/components/driver/include -IC:/esp/esp-idf/components/driver/deprecated -IC:/esp/esp-idf/components/driver/esp32/include -IC:/esp/esp-idf/components/esp_pm/include -IC:/esp/esp-idf/components/mbedtls/port/include -IC:/esp/esp-idf/components/mbedtls/mbedtls/include -IC:/esp/esp-idf/components/mbedtls/mbedtls/library -IC:/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -IC:/esp/esp-idf/components/esp_app_format/include -IC:/esp/esp-idf/components/bootloader_support/include -IC:/esp/esp-idf/components/bootloader_support/bootloader_flash/include -IC:/esp/esp-idf/components/esp_partition/include -IC:/esp/esp-idf/components/app_update/include -IC:/esp/esp-idf/components/spi_flash/include -IC:/esp/esp-idf/components/pthread/include -IC:/esp/esp-idf/components/esp_timer/include -IC:/esp/esp-idf/components/app_trace/include -IC:/esp/esp-idf/components/esp_event/include -IC:/esp/esp-idf/components/nvs_flash/include -IC:/esp/esp-idf/components/esp_phy/include -IC:/esp/esp-idf/components/esp_phy/esp32/include -IC:/esp/esp-idf/components/vfs/include -IC:/esp/esp-idf/components/esp_netif/include -IC:/esp/esp-idf/components/wpa_supplicant/include -IC:/esp/esp-idf/components/wpa_supplicant/port/include -IC:/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -IC:/esp/esp-idf/components/esp_wifi/include -IC:/esp/esp-idf/components/unity/include -IC:/esp/esp-idf/components/unity/unity/src -IC:/esp/esp-idf/components/cmock/CMock/src -IC:/esp/esp-idf/components/console -IC:/esp/esp-idf/components/http_parser -IC:/esp/esp-idf/components/esp-tls -IC:/esp/esp-idf/components/esp-tls/esp-tls-crypto -IC:/esp/esp-idf/components/esp_adc/include -IC:/esp/esp-idf/components/esp_adc/interface -IC:/esp/esp-idf/components/esp_adc/esp32/include -IC:/esp/esp-idf/components/esp_adc/deprecated/include -IC:/esp/esp-idf/components/esp_eth/include -IC:/esp/esp-idf/components/esp_gdbstub/include -IC:/esp/esp-idf/components/esp_gdbstub/xtensa -IC:/esp/esp-idf/components/esp_gdbstub/esp32 -IC:/esp/esp-idf/components/esp_hid/include -IC:/esp/esp-idf/components/tcp_transport/include -IC:/esp/esp-idf/components/esp_http_client/include -IC:/esp/esp-idf/components/esp_http_server/include -IC:/esp/esp-idf/components/esp_https_ota/include -IC:/esp/esp-idf/components/esp_lcd/include -IC:/esp/esp-idf/components/esp_lcd/interface -IC:/esp/esp-idf/components/protobuf-c/protobuf-c -IC:/esp/esp-idf/components/protocomm/include/common -IC:/esp/esp-idf/components/protocomm/include/security -IC:/esp/esp-idf/components/protocomm/include/transports -IC:/esp/esp-idf/components/esp_local_ctrl/include -IC:/esp/esp-idf/components/esp_psram/include -IC:/esp/esp-idf/components/espcoredump/include -IC:/esp/esp-idf/components/espcoredump/include/port/xtensa -IC:/esp/esp-idf/components/wear_levelling/include -IC:/esp/esp-idf/components/sdmmc/include -IC:/esp/esp-idf/components/fatfs/diskio -IC:/esp/esp-idf/components/fatfs/vfs -IC:/esp/esp-idf/components/fatfs/src -IC:/esp/esp-idf/components/idf_test/include -IC:/esp/esp-idf/components/idf_test/include/esp32 -IC:/esp/esp-idf/components/ieee802154/include -IC:/esp/esp-idf/components/json/cJSON -IC:/esp/esp-idf/components/mqtt/esp-mqtt/include -IC:/esp/esp-idf/components/perfmon/include -IC:/esp/esp-idf/components/spiffs/include -IC:/esp/esp-idf/components/ulp/ulp_common/include -IC:/esp/esp-idf/components/ulp/ulp_common/include/esp32 -IC:/esp/esp-idf/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=D:/VScode/Learn/esp-idf/mini-project/mini-project=. -fmacro-prefix-map=C:/esp/esp-idf=/IDF -fstrict-volatile-bitfields -Wno-error=unused-but-set-variable -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -D_GNU_SOURCE -DIDF_VER=\"v5.0.1-397-g3050ea656f-dirty\" -DESP_PLATFORM -D_POSIX_READER_WRITER_LOCKS -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c
+In file included from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:3:
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:39:6: error: #error "include FreeRTOS.h must appear in source files before include task.h"
+   39 |     #error "include FreeRTOS.h must appear in source files before include task.h"
+      |      ^~~~~
+In file included from C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:42,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:3:
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:63:6: error: #error "FreeRTOS.h must be included before list.h"
+   63 |     #error "FreeRTOS.h must be included before list.h"
+      |      ^~~~~
+In file included from C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:42,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:3:
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:151:25: error: unknown type name 'TickType_t'
+  151 |     configLIST_VOLATILE TickType_t xItemValue;              /*< The value being listed.  In most cases this is used to sort the list in descending order. */
+      |                         ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:163:25: error: unknown type name 'TickType_t'
+  163 |     configLIST_VOLATILE TickType_t xItemValue;
+      |                         ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:175:14: error: unknown type name 'UBaseType_t'
+  175 |     volatile UBaseType_t uxNumberOfItems;
+      |              ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h: In function 'vListInitialise':
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:353:47: error: expected declaration specifiers before 'PRIVILEGED_FUNCTION'
+  353 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:364:55: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  364 | void vListInitialiseItem( ListItem_t * const pxItem ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:378:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  378 |                   ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:400:57: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  400 |                      ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                         ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:415:1: error: unknown type name 'UBaseType_t'
+  415 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:415:63: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  415 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+In file included from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:3:
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:88:1: warning: empty declaration
+   88 | struct tskTaskControlBlock;     /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+      | ^~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:89:38: error: storage class specified for parameter 'TaskHandle_t'
+   89 | typedef struct tskTaskControlBlock * TaskHandle_t;
+      |                                      ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:95:21: error: expected declaration specifiers or '...' before '*' token
+   95 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |                     ^
+In file included from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:3:
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:106:3: error: storage class specified for parameter 'eTaskState'
+  106 | } eTaskState;
+      |   ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:116:3: error: storage class specified for parameter 'eNotifyAction'
+  116 | } eNotifyAction;
+      |   ^~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:124:5: error: unknown type name 'BaseType_t'
+  124 |     BaseType_t xOverflowCount;
+      |     ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:125:5: error: unknown type name 'TickType_t'
+  125 |     TickType_t xTimeOnEntering;
+      |     ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:126:3: error: storage class specified for parameter 'TimeOut_t'
+  126 | } TimeOut_t;
+      |   ^~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:136:3: error: storage class specified for parameter 'MemoryRegion_t'
+  136 | } MemoryRegion_t;
+      |   ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:143:5: error: unknown type name 'TaskFunction_t'
+  143 |     TaskFunction_t pvTaskCode;
+      |     ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:145:5: error: unknown type name 'configSTACK_DEPTH_TYPE'
+  145 |     configSTACK_DEPTH_TYPE usStackDepth;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:147:5: error: unknown type name 'UBaseType_t'
+  147 |     UBaseType_t uxPriority;
+      |     ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:148:5: error: unknown type name 'StackType_t'
+  148 |     StackType_t * puxStackBuffer;
+      |     ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:149:5: error: expected specifier-qualifier-list before 'MemoryRegion_t'
+  149 |     MemoryRegion_t xRegions[ portNUM_CONFIGURABLE_REGIONS ];
+      |     ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:153:3: error: storage class specified for parameter 'TaskParameters_t'
+  153 | } TaskParameters_t;
+      |   ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:159:5: error: expected specifier-qualifier-list before 'TaskHandle_t'
+  159 |     TaskHandle_t xHandle;                            /* The handle of the task to which the rest of the information in the structure relates. */
+      |     ^~~~~~~~~~~~
+In file included from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:3:
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:171:3: error: storage class specified for parameter 'TaskStatus_t'
+  171 | } TaskStatus_t;
+      |   ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:183:3: error: storage class specified for parameter 'eSleepModeStatus'
+  183 | } eSleepModeStatus;
+      |   ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:852:31: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  852 | void vTaskAllocateMPURegions( TaskHandle_t xTask,
+      |                               ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:853:37: error: type defaults to 'int' in declaration of 'MemoryRegion_t' [-Werror=implicit-int]
+  853 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:853:52: error: expected ';', ',' or ')' before '*' token
+  853 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                                    ^
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:900:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  900 | void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+      |                   ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:959:24: error: unknown type name 'TickType_t'
+  959 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:959:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  959 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1030:1: error: unknown type name 'BaseType_t'
+ 1030 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1030:29: error: unknown type name 'TickType_t'
+ 1030 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      |                             ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1031:35: error: unknown type name 'TickType_t'
+ 1031 |                             const TickType_t xTimeIncrement ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1077:1: error: unknown type name 'BaseType_t'
+ 1077 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1077:29: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1077 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                             ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1130:1: error: unknown type name 'UBaseType_t'
+ 1130 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1130:38: error: type defaults to 'int' in declaration of 'TaskHandle_t' [-Werror=implicit-int]
+ 1130 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                      ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1130:51: error: expected ';', ',' or ')' before 'xTask'
+ 1130 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1142:1: error: unknown type name 'UBaseType_t'
+ 1142 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1142:45: error: type defaults to 'int' in declaration of 'TaskHandle_t' [-Werror=implicit-int]
+ 1142 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1142:58: error: expected ';', ',' or ')' before 'xTask'
+ 1142 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                          ^~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1164:1: error: expected declaration specifiers before 'eTaskState'
+ 1164 | eTaskState eTaskGetState( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1226:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1226 | void vTaskGetInfo( TaskHandle_t xTask,
+      |                    ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1227:20: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+ 1227 |                    TaskStatus_t * pxTaskStatus,
+      |                    ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1228:20: error: unknown type name 'BaseType_t'
+ 1228 |                    BaseType_t xGetFreeStackSpace,
+      |                    ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1229:20: error: expected declaration specifiers or '...' before 'eTaskState'
+ 1229 |                    eTaskState eState ) PRIVILEGED_FUNCTION;
+      |                    ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1277:24: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1277 | void vTaskPrioritySet( TaskHandle_t xTask,
+      |                        ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1278:24: error: unknown type name 'UBaseType_t'
+ 1278 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1335:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1335 | void vTaskSuspend( TaskHandle_t xTaskToSuspend ) PRIVILEGED_FUNCTION;
+      |                    ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1390:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1390 | void vTaskResume( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                   ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1425:1: error: unknown type name 'BaseType_t'
+ 1425 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1425:32: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1425 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1468:34: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1468 | void vTaskStartScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1530:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1530 | void vTaskEndScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1589:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1589 | void vTaskSuspendAll( void ) PRIVILEGED_FUNCTION;
+      |                              ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1649:1: error: unknown type name 'BaseType_t'
+ 1649 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1649:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1649 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1670:1: error: unknown type name 'TickType_t'
+ 1670 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1670:38: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1670 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1692:1: error: unknown type name 'TickType_t'
+ 1692 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1692:45: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1692 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1712:1: error: unknown type name 'UBaseType_t'
+ 1712 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1712:44: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1712 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1731:23: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1731 | char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                       ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1753:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 1753 | TaskHandle_t xTaskGetHandle( const char * pcNameToQuery ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      | ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1779:1: error: unknown type name 'UBaseType_t'
+ 1779 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1779:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1779 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                          ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1805:1: error: unknown type name 'configSTACK_DEPTH_TYPE'
+ 1805 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1805:54: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1805 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1820:31: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1820 | uint8_t* pxTaskGetStackStart( TaskHandle_t xTask) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2019:1: error: unknown type name 'BaseType_t'
+ 2019 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2019:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2019 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      |                                          ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2029:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 2029 | TaskHandle_t xTaskGetIdleTaskHandle( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2128:1: error: unknown type name 'UBaseType_t'
+ 2128 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      | ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2128:35: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+ 2128 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      |                                   ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2129:41: error: unknown type name 'UBaseType_t'
+ 2129 |                                   const UBaseType_t uxArraySize,
+      |                                         ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2178:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2178 | void vTaskList( char * pcWriteBuffer ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                        ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2233:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2233 | void vTaskGetRunTimeStats( char * pcWriteBuffer ) PRIVILEGED_FUNCTION;     /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2269:46: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2269 | uint32_t ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      |                                              ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2384:1: error: unknown type name 'BaseType_t'
+ 2384 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2384:32: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2384 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      |                                ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2385:32: error: unknown type name 'UBaseType_t'
+ 2385 |                                UBaseType_t uxIndexToNotify,
+      |                                ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2387:32: error: expected declaration specifiers or '...' before 'eNotifyAction'
+ 2387 |                                eNotifyAction eAction,
+      |                                ^~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2548:1: error: unknown type name 'BaseType_t'
+ 2548 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2548:39: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2548 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      |                                       ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2549:39: error: unknown type name 'UBaseType_t'
+ 2549 |                                       UBaseType_t uxIndexToNotify,
+      |                                       ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2551:39: error: expected declaration specifiers or '...' before 'eNotifyAction'
+ 2551 |                                       eNotifyAction eAction,
+      |                                       ^~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2553:39: error: unknown type name 'BaseType_t'
+ 2553 |                                       BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                       ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2701:1: error: unknown type name 'BaseType_t'
+ 2701 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2701:36: error: unknown type name 'UBaseType_t'
+ 2701 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      |                                    ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2705:36: error: unknown type name 'TickType_t'
+ 2705 |                                    TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                    ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2875:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2875 | void vTaskGenericNotifyGiveFromISR( TaskHandle_t xTaskToNotify,
+      |                                     ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2876:37: error: unknown type name 'UBaseType_t'
+ 2876 |                                     UBaseType_t uxIndexToNotify,
+      |                                     ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2877:37: error: unknown type name 'BaseType_t'
+ 2877 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2985:35: error: unknown type name 'UBaseType_t'
+ 2985 | uint32_t ulTaskGenericNotifyTake( UBaseType_t uxIndexToWaitOn,
+      |                                   ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2986:35: error: unknown type name 'BaseType_t'
+ 2986 |                                   BaseType_t xClearCountOnExit,
+      |                                   ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2987:35: error: unknown type name 'TickType_t'
+ 2987 |                                   TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3054:1: error: unknown type name 'BaseType_t'
+ 3054 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3054:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 3054 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      |                                          ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3055:42: error: unknown type name 'UBaseType_t'
+ 3055 |                                          UBaseType_t uxIndexToClear ) PRIVILEGED_FUNCTION;
+      |                                          ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3123:41: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 3123 | uint32_t ulTaskGenericNotifyValueClear( TaskHandle_t xTask,
+      |                                         ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3124:41: error: unknown type name 'UBaseType_t'
+ 3124 |                                         UBaseType_t uxIndexToClear,
+      |                                         ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3149:28: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 3149 | void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                            ^~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3238:1: error: unknown type name 'BaseType_t'
+ 3238 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3238:34: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 3238 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      |                                  ^~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3239:34: error: unknown type name 'TickType_t'
+ 3239 |                                  TickType_t * const pxTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3271:1: error: unknown type name 'BaseType_t'
+ 3271 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3271:31: error: unknown type name 'TickType_t'
+ 3271 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3284:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 3284 | TaskHandle_t xTaskGetCurrentTaskHandleForCPU( BaseType_t cpuid );
+      | ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3297:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 3297 | TaskHandle_t xTaskGetIdleTaskHandleForCPU( UBaseType_t cpuid );
+      | ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3302:1: error: unknown type name 'BaseType_t'
+ 3302 | BaseType_t xTaskGetAffinity( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3302:30: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 3302 | BaseType_t xTaskGetAffinity( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                              ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3322:1: error: unknown type name 'BaseType_t'
+ 3322 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3322:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 3322 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      |                                       ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3334:1: error: unknown type name 'BaseType_t'
+ 3334 | BaseType_t xTaskIncrementTickOtherCores( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3334:49: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 3334 | BaseType_t xTaskIncrementTickOtherCores( void ) PRIVILEGED_FUNCTION;
+      |                                                 ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3369:35: error: unknown type name 'TickType_t'
+ 3369 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3369:61: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 3369 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                             ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3371:44: error: unknown type name 'TickType_t'
+ 3371 |                                      const TickType_t xItemValue,
+      |                                            ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3372:44: error: unknown type name 'TickType_t'
+ 3372 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3372:70: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 3372 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3386:39: error: unknown type name 'TickType_t'
+ 3386 |                                       TickType_t xTicksToWait,
+      |                                       ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3387:45: error: unknown type name 'BaseType_t'
+ 3387 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3432:1: error: unknown type name 'BaseType_t'
+ 3432 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3432:73: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 3432 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      |                                                                         ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3434:47: error: unknown type name 'TickType_t'
+ 3434 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3434:71: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 3434 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                                                       ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3444:1: error: expected declaration specifiers before 'portDONT_DISCARD'
+ 3444 | portDONT_DISCARD void vTaskSwitchContext( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3450:1: error: unknown type name 'TickType_t'
+ 3450 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3450:46: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 3450 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      |                                              ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3455:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 3455 | TaskHandle_t xTaskGetCurrentTaskHandle( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3461:31: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 3461 | void vTaskMissedYield( void ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3467:1: error: unknown type name 'BaseType_t'
+ 3467 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3467:43: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 3467 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3473:1: error: unknown type name 'BaseType_t'
+ 3473 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3473:34: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 3473 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3479:1: error: unknown type name 'BaseType_t'
+ 3479 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3479:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 3479 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3489:43: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 3489 | void vTaskPriorityDisinheritAfterTimeout( TaskHandle_t const pxMutexHolder,
+      |                                           ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3490:43: error: unknown type name 'UBaseType_t'
+ 3490 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3495:1: error: unknown type name 'UBaseType_t'
+ 3495 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3495:34: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 3495 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3501:26: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 3501 | void vTaskSetTaskNumber( TaskHandle_t xTask,
+      |                          ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3502:32: error: unknown type name 'UBaseType_t'
+ 3502 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3512:27: error: unknown type name 'TickType_t'
+ 3512 | void vTaskStepTick( const TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                           ^~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3512:53: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 3512 | void vTaskStepTick( const TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                                                     ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3528:1: error: expected declaration specifiers before 'eSleepModeStatus'
+ 3528 | eSleepModeStatus eTaskConfirmSleepModeStatus( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3534:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 3534 | TaskHandle_t pvTaskIncrementMutexHeldCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:3540:36: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 3540 | void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                    ^~~~~~~~~
+In file included from C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:12,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/wifi.h:4,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:5:
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:88:1: warning: empty declaration
+   88 | struct esp_ip6_addr {
+      | ^~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:97:1: warning: empty declaration
+   97 | struct esp_ip4_addr {
+      | ^~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:101:29: error: storage class specified for parameter 'esp_ip4_addr_t'
+  101 | typedef struct esp_ip4_addr esp_ip4_addr_t;
+      |                             ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:103:29: error: storage class specified for parameter 'esp_ip6_addr_t'
+  103 | typedef struct esp_ip6_addr esp_ip6_addr_t;
+      |                             ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:111:9: error: expected specifier-qualifier-list before 'esp_ip6_addr_t'
+  111 |         esp_ip6_addr_t ip6; /*!< IPv6 address type */
+      |         ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:115:3: error: storage class specified for parameter 'esp_ip_addr_t'
+  115 | } esp_ip_addr_t;
+      |   ^~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:124:3: error: storage class specified for parameter 'esp_ip6_addr_type_t'
+  124 | } esp_ip6_addr_type_t;
+      |   ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:133:1: error: expected declaration specifiers before 'esp_ip6_addr_type_t'
+  133 | esp_ip6_addr_type_t esp_netif_ip6_get_addr_type(esp_ip6_addr_t* ip6_addr);
+      | ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:141:43: error: expected declaration specifiers or '...' before 'esp_ip_addr_t'
+  141 | static inline void esp_netif_ip_addr_copy(esp_ip_addr_t *dest, const esp_ip_addr_t *src)
+      |                                           ^~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:141:70: error: type defaults to 'int' in declaration of 'esp_ip_addr_t' [-Werror=implicit-int]
+  141 | static inline void esp_netif_ip_addr_copy(esp_ip_addr_t *dest, const esp_ip_addr_t *src)
+      |                                                                      ^~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:141:84: error: expected ';', ',' or ')' before '*' token
+  141 | static inline void esp_netif_ip_addr_copy(esp_ip_addr_t *dest, const esp_ip_addr_t *src)
+      |                                                                                    ^
+In file included from C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:12,
+                 from C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:13,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/wifi.h:4,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:5:
+C:/esp/esp-idf/components/esp_event/include/esp_event_base.h:27:22: error: storage class specified for parameter 'esp_event_base_t'
+   27 | typedef const char*  esp_event_base_t; /**< unique pointer to a subsystem that exposes events */
+      |                      ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_event/include/esp_event_base.h:28:22: error: storage class specified for parameter 'esp_event_loop_handle_t'
+   28 | typedef void*        esp_event_loop_handle_t; /**< a number that identifies an event with respect to a base */
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_event/include/esp_event_base.h:30:41: error: expected declaration specifiers or '...' before 'esp_event_base_t'
+   30 |                                         esp_event_base_t event_base,
+      |                                         ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_event/include/esp_event_base.h:33:22: error: storage class specified for parameter 'esp_event_handler_instance_t'
+   33 | typedef void*        esp_event_handler_instance_t; /**< context identifying an instance of a registered event handler */
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:13,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/wifi.h:4,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:5:
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:47:1: warning: empty declaration
+   47 | struct esp_netif_obj;
+      | ^~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:49:30: error: storage class specified for parameter 'esp_netif_t'
+   49 | typedef struct esp_netif_obj esp_netif_t;
+      |                              ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:58:3: error: storage class specified for parameter 'esp_netif_dns_type_t'
+   58 | } esp_netif_dns_type_t;
+      |   ^~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:62:5: error: expected specifier-qualifier-list before 'esp_ip_addr_t'
+   62 |     esp_ip_addr_t ip; /**< IPV4 address of DNS server */
+      |     ^~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:63:3: error: storage class specified for parameter 'esp_netif_dns_info_t'
+   63 | } esp_netif_dns_info_t;
+      |   ^~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:71:3: error: storage class specified for parameter 'esp_netif_dhcp_status_t'
+   71 | } esp_netif_dhcp_status_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:80:3: error: storage class specified for parameter 'esp_netif_dhcp_option_mode_t'
+   80 | } esp_netif_dhcp_option_mode_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:92:3: error: storage class specified for parameter 'esp_netif_dhcp_option_id_t'
+   92 | } esp_netif_dhcp_option_id_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:104:3: error: storage class specified for parameter 'ip_event_t'
+  104 | } ip_event_t;
+      |   ^~~~~~~~~~
+In file included from C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:12,
+                 from C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:13,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/wifi.h:4,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:5:
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:107:24: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'IP_EVENT'
+  107 | ESP_EVENT_DECLARE_BASE(IP_EVENT);
+      |                        ^~~~~~~~
+C:/esp/esp-idf/components/esp_event/include/esp_event_base.h:23:60: note: in definition of macro 'ESP_EVENT_DECLARE_BASE'
+   23 | #define ESP_EVENT_DECLARE_BASE(id) extern esp_event_base_t id
+      |                                                            ^~
+In file included from C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:13,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/wifi.h:4,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:5:
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:112:5: error: expected specifier-qualifier-list before 'esp_ip4_addr_t'
+  112 |     esp_ip4_addr_t ip;      /**< Interface IPV4 address */
+      |     ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:115:3: error: storage class specified for parameter 'esp_netif_ip_info_t'
+  115 | } esp_netif_ip_info_t;
+      |   ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:120:5: error: expected specifier-qualifier-list before 'esp_ip6_addr_t'
+  120 |     esp_ip6_addr_t ip; /**< Interface IPV6 address */
+      |     ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:121:3: error: storage class specified for parameter 'esp_netif_ip6_info_t'
+  121 | } esp_netif_ip6_info_t;
+      |   ^~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:129:5: error: expected specifier-qualifier-list before 'esp_netif_t'
+  129 |     esp_netif_t *esp_netif;          /*!< Pointer to corresponding esp-netif object */
+      |     ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:132:3: error: storage class specified for parameter 'ip_event_got_ip_t'
+  132 | } ip_event_got_ip_t;
+      |   ^~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:136:5: error: expected specifier-qualifier-list before 'esp_netif_t'
+  136 |     esp_netif_t *esp_netif;          /*!< Pointer to corresponding esp-netif object */
+      |     ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:139:3: error: storage class specified for parameter 'ip_event_got_ip6_t'
+  139 | } ip_event_got_ip6_t;
+      |   ^~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:143:5: error: expected specifier-qualifier-list before 'esp_ip6_addr_t'
+  143 |     esp_ip6_addr_t addr;            /*!< The address to be added to the interface */
+      |     ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:145:3: error: storage class specified for parameter 'ip_event_add_ip6_t'
+  145 | } ip_event_add_ip6_t;
+      |   ^~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:149:5: error: expected specifier-qualifier-list before 'esp_netif_t'
+  149 |     esp_netif_t *esp_netif; /*!< Pointer to the associated netif handle */
+      |     ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:152:3: error: storage class specified for parameter 'ip_event_ap_staipassigned_t'
+  152 | } ip_event_ap_staipassigned_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:164:3: error: storage class specified for parameter 'esp_netif_flags_t'
+  164 | } esp_netif_flags_t;
+      |   ^~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:169:3: error: storage class specified for parameter 'esp_netif_ip_event_type_t'
+  169 | } esp_netif_ip_event_type_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:177:3: error: storage class specified for parameter 'bridgeif_config_t'
+  177 | } bridgeif_config_t;
+      |   ^~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:191:5: error: expected specifier-qualifier-list before 'esp_netif_flags_t'
+  191 |     esp_netif_flags_t flags;         /*!< flags that define esp-netif behavior */
+      |     ^~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:203:3: error: storage class specified for parameter 'esp_netif_inherent_config_t'
+  203 | } esp_netif_inherent_config_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:205:33: error: storage class specified for parameter 'esp_netif_config_t'
+  205 | typedef struct esp_netif_config esp_netif_config_t;
+      |                                 ^~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:210:16: error: storage class specified for parameter 'esp_netif_iodriver_handle'
+  210 | typedef void * esp_netif_iodriver_handle;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:217:30: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  217 |     esp_err_t (*post_attach)(esp_netif_t *netif, esp_netif_iodriver_handle h); /*!< post attach function pointer */
+      |                              ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:217:50: error: expected declaration specifiers or '...' before 'esp_netif_iodriver_handle'
+  217 |     esp_err_t (*post_attach)(esp_netif_t *netif, esp_netif_iodriver_handle h); /*!< post attach function pointer */
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:218:5: error: expected ';' before 'esp_netif_t'
+  218 |     esp_netif_t *netif; /*!< netif handle */
+      |     ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:219:3: error: storage class specified for parameter 'esp_netif_driver_base_t'
+  219 | } esp_netif_driver_base_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:225:5: error: expected specifier-qualifier-list before 'esp_netif_iodriver_handle'
+  225 |     esp_netif_iodriver_handle handle; /*!< io-driver handle */
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:224:1: warning: empty declaration
+  224 | struct esp_netif_driver_ifconfig {
+      | ^~~~~~
+In file included from C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:13,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/wifi.h:4,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:5:
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:231:42: error: storage class specified for parameter 'esp_netif_driver_ifconfig_t'
+  231 | typedef struct esp_netif_driver_ifconfig esp_netif_driver_ifconfig_t;
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:237:42: error: storage class specified for parameter 'esp_netif_netstack_config_t'
+  237 | typedef struct esp_netif_netstack_config esp_netif_netstack_config_t;
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:243:39: error: expected ':', ',', ';', '}' or '__attribute__' before '*' token
+  243 |     const esp_netif_inherent_config_t *base; /*!< base config */
+      |                                       ^
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:242:1: warning: empty declaration
+  242 | struct esp_netif_config {
+      | ^~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:253:5: error: expected specifier-qualifier-list before 'esp_ip4_addr_t'
+  253 |     esp_ip4_addr_t ip;      /**< Clients IP address */
+      |     ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:254:3: error: storage class specified for parameter 'esp_netif_pair_mac_ip_t'
+  254 | } esp_netif_pair_mac_ip_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_types.h:259:42: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  259 | typedef esp_err_t (*esp_netif_receive_t)(esp_netif_t *esp_netif, void *buffer, size_t len, void *eb);
+      |                                          ^~~~~~~~~~~
+In file included from C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:14,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/wifi.h:4,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:5:
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_defaults.h:175:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+  175 | extern const esp_netif_netstack_config_t *_g_esp_netif_netstack_default_eth;
+      |                                          ^
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_defaults.h:176:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+  176 | extern const esp_netif_netstack_config_t *_g_esp_netif_netstack_default_br;
+      |                                          ^
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_defaults.h:177:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+  177 | extern const esp_netif_netstack_config_t *_g_esp_netif_netstack_default_wifi_sta;
+      |                                          ^
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_defaults.h:179:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+  179 | extern const esp_netif_netstack_config_t *_g_esp_netif_netstack_default_wifi_ap;
+      |                                          ^
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_defaults.h:181:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+  181 | extern const esp_netif_netstack_config_t *_g_esp_netif_netstack_default_ppp;
+      |                                          ^
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_defaults.h:188:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_g_esp_netif_inherent_sta_config'
+  188 | extern const esp_netif_inherent_config_t _g_esp_netif_inherent_sta_config;
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_defaults.h:190:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_g_esp_netif_inherent_ap_config'
+  190 | extern const esp_netif_inherent_config_t _g_esp_netif_inherent_ap_config;
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_defaults.h:192:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_g_esp_netif_inherent_eth_config'
+  192 | extern const esp_netif_inherent_config_t _g_esp_netif_inherent_eth_config;
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_defaults.h:193:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_g_esp_netif_inherent_ppp_config'
+  193 | extern const esp_netif_inherent_config_t _g_esp_netif_inherent_ppp_config;
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif_defaults.h:196:34: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_g_esp_netif_soft_ap_ip'
+  196 | extern const esp_netif_ip_info_t _g_esp_netif_soft_ap_ip;
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/wifi.h:4,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:5:
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:62:1: error: expected declaration specifiers before 'esp_netif_t'
+   62 | esp_netif_t *esp_netif_new(const esp_netif_config_t *esp_netif_config);
+      | ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:69:24: error: expected declaration specifiers or '...' before 'esp_netif_t'
+   69 | void esp_netif_destroy(esp_netif_t *esp_netif);
+      |                        ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:81:39: error: expected declaration specifiers or '...' before 'esp_netif_t'
+   81 | esp_err_t esp_netif_set_driver_config(esp_netif_t *esp_netif,
+      |                                       ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:82:45: error: type defaults to 'int' in declaration of 'esp_netif_driver_ifconfig_t' [-Werror=implicit-int]
+   82 |                                       const esp_netif_driver_ifconfig_t *driver_config);
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:82:73: error: expected ';', ',' or ')' before '*' token
+   82 |                                       const esp_netif_driver_ifconfig_t *driver_config);
+      |                                                                         ^
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:98:28: error: expected declaration specifiers or '...' before 'esp_netif_t'
+   98 | esp_err_t esp_netif_attach(esp_netif_t *esp_netif, esp_netif_iodriver_handle driver_handle);
+      |                            ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:98:52: error: expected declaration specifiers or '...' before 'esp_netif_iodriver_handle'
+   98 | esp_err_t esp_netif_attach(esp_netif_t *esp_netif, esp_netif_iodriver_handle driver_handle);
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:139:29: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  139 | esp_err_t esp_netif_receive(esp_netif_t *esp_netif, void *buffer, size_t len, void *eb);
+      |                             ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:168:46: error: expected declaration specifiers or '...' before 'esp_event_base_t'
+  168 | void esp_netif_action_start(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                              ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:180:45: error: expected declaration specifiers or '...' before 'esp_event_base_t'
+  180 | void esp_netif_action_stop(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                             ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:192:50: error: expected declaration specifiers or '...' before 'esp_event_base_t'
+  192 | void esp_netif_action_connected(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                  ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:204:53: error: expected declaration specifiers or '...' before 'esp_event_base_t'
+  204 | void esp_netif_action_disconnected(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                     ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:216:47: error: expected declaration specifiers or '...' before 'esp_event_base_t'
+  216 | void esp_netif_action_got_ip(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                               ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:228:65: error: expected declaration specifiers or '...' before 'esp_event_base_t'
+  228 | void esp_netif_action_join_ip6_multicast_group(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                                 ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:240:66: error: expected declaration specifiers or '...' before 'esp_event_base_t'
+  240 | void esp_netif_action_leave_ip6_multicast_group(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                                  ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:252:56: error: expected declaration specifiers or '...' before 'esp_event_base_t'
+  252 | void esp_netif_action_add_ip6_address(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                        ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:264:59: error: expected declaration specifiers or '...' before 'esp_event_base_t'
+  264 | void esp_netif_action_remove_ip6_address(void *esp_netif, esp_event_base_t base, int32_t event_id, void *data);
+      |                                                           ^~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:276:39: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  276 | esp_err_t esp_netif_set_default_netif(esp_netif_t *esp_netif);
+      |                                       ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:332:29: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  332 | esp_err_t esp_netif_set_mac(esp_netif_t *esp_netif, uint8_t mac[]);
+      |                             ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:344:29: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  344 | esp_err_t esp_netif_get_mac(esp_netif_t *esp_netif, uint8_t mac[]);
+      |                             ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:361:34: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  361 | esp_err_t esp_netif_set_hostname(esp_netif_t *esp_netif, const char *hostname);
+      |                                  ^~~~~~~~~~~
+In file included from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/wifi.h:4,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:5:
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:374:34: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  374 | esp_err_t esp_netif_get_hostname(esp_netif_t *esp_netif, const char **hostname);
+      |                                  ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:385:28: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  385 | bool esp_netif_is_netif_up(esp_netif_t *esp_netif);
+      |                            ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:400:33: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  400 | esp_err_t esp_netif_get_ip_info(esp_netif_t *esp_netif, esp_netif_ip_info_t *ip_info);
+      |                                 ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:400:57: error: expected declaration specifiers or '...' before 'esp_netif_ip_info_t'
+  400 | esp_err_t esp_netif_get_ip_info(esp_netif_t *esp_netif, esp_netif_ip_info_t *ip_info);
+      |                                                         ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:417:37: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  417 | esp_err_t esp_netif_get_old_ip_info(esp_netif_t *esp_netif, esp_netif_ip_info_t *ip_info);
+      |                                     ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:417:61: error: expected declaration specifiers or '...' before 'esp_netif_ip_info_t'
+  417 | esp_err_t esp_netif_get_old_ip_info(esp_netif_t *esp_netif, esp_netif_ip_info_t *ip_info);
+      |                                                             ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:441:33: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  441 | esp_err_t esp_netif_set_ip_info(esp_netif_t *esp_netif, const esp_netif_ip_info_t *ip_info);
+      |                                 ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:441:63: error: type defaults to 'int' in declaration of 'esp_netif_ip_info_t' [-Werror=implicit-int]
+  441 | esp_err_t esp_netif_set_ip_info(esp_netif_t *esp_netif, const esp_netif_ip_info_t *ip_info);
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:441:83: error: expected ';', ',' or ')' before '*' token
+  441 | esp_err_t esp_netif_set_ip_info(esp_netif_t *esp_netif, const esp_netif_ip_info_t *ip_info);
+      |                                                                                   ^
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:460:37: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  460 | esp_err_t esp_netif_set_old_ip_info(esp_netif_t *esp_netif, const esp_netif_ip_info_t *ip_info);
+      |                                     ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:460:67: error: type defaults to 'int' in declaration of 'esp_netif_ip_info_t' [-Werror=implicit-int]
+  460 | esp_err_t esp_netif_set_old_ip_info(esp_netif_t *esp_netif, const esp_netif_ip_info_t *ip_info);
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:460:87: error: expected ';', ',' or ')' before '*' token
+  460 | esp_err_t esp_netif_set_old_ip_info(esp_netif_t *esp_netif, const esp_netif_ip_info_t *ip_info);
+      |                                                                                       ^
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:472:36: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  472 | int esp_netif_get_netif_impl_index(esp_netif_t *esp_netif);
+      |                                    ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:488:41: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  488 | esp_err_t esp_netif_get_netif_impl_name(esp_netif_t *esp_netif, char* name);
+      |                                         ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:519:24: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  519 | esp_netif_dhcps_option(esp_netif_t *esp_netif, esp_netif_dhcp_option_mode_t opt_op, esp_netif_dhcp_option_id_t opt_id,
+      |                        ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:519:48: error: expected declaration specifiers or '...' before 'esp_netif_dhcp_option_mode_t'
+  519 | esp_netif_dhcps_option(esp_netif_t *esp_netif, esp_netif_dhcp_option_mode_t opt_op, esp_netif_dhcp_option_id_t opt_id,
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:519:85: error: expected declaration specifiers or '...' before 'esp_netif_dhcp_option_id_t'
+  519 | esp_netif_dhcps_option(esp_netif_t *esp_netif, esp_netif_dhcp_option_mode_t opt_op, esp_netif_dhcp_option_id_t opt_id,
+      |                                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:538:24: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  538 | esp_netif_dhcpc_option(esp_netif_t *esp_netif, esp_netif_dhcp_option_mode_t opt_op, esp_netif_dhcp_option_id_t opt_id,
+      |                        ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:538:48: error: expected declaration specifiers or '...' before 'esp_netif_dhcp_option_mode_t'
+  538 | esp_netif_dhcpc_option(esp_netif_t *esp_netif, esp_netif_dhcp_option_mode_t opt_op, esp_netif_dhcp_option_id_t opt_id,
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:538:85: error: expected declaration specifiers or '...' before 'esp_netif_dhcp_option_id_t'
+  538 | esp_netif_dhcpc_option(esp_netif_t *esp_netif, esp_netif_dhcp_option_mode_t opt_op, esp_netif_dhcp_option_id_t opt_id,
+      |                                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:554:33: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  554 | esp_err_t esp_netif_dhcpc_start(esp_netif_t *esp_netif);
+      |                                 ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:569:32: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  569 | esp_err_t esp_netif_dhcpc_stop(esp_netif_t *esp_netif);
+      |                                ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:580:38: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  580 | esp_err_t esp_netif_dhcpc_get_status(esp_netif_t *esp_netif, esp_netif_dhcp_status_t *status);
+      |                                      ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:580:62: error: expected declaration specifiers or '...' before 'esp_netif_dhcp_status_t'
+  580 | esp_err_t esp_netif_dhcpc_get_status(esp_netif_t *esp_netif, esp_netif_dhcp_status_t *status);
+      |                                                              ^~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:591:38: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  591 | esp_err_t esp_netif_dhcps_get_status(esp_netif_t *esp_netif, esp_netif_dhcp_status_t *status);
+      |                                      ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:591:62: error: expected declaration specifiers or '...' before 'esp_netif_dhcp_status_t'
+  591 | esp_err_t esp_netif_dhcps_get_status(esp_netif_t *esp_netif, esp_netif_dhcp_status_t *status);
+      |                                                              ^~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:603:33: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  603 | esp_err_t esp_netif_dhcps_start(esp_netif_t *esp_netif);
+      |                                 ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:616:32: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  616 | esp_err_t esp_netif_dhcps_stop(esp_netif_t *esp_netif);
+      |                                ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:629:46: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  629 | esp_err_t esp_netif_dhcps_get_clients_by_mac(esp_netif_t *esp_netif, int num, esp_netif_pair_mac_ip_t *mac_ip_pair);
+      |                                              ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:629:79: error: expected declaration specifiers or '...' before 'esp_netif_pair_mac_ip_t'
+  629 | esp_err_t esp_netif_dhcps_get_clients_by_mac(esp_netif_t *esp_netif, int num, esp_netif_pair_mac_ip_t *mac_ip_pair);
+      |                                                                               ^~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:669:34: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  669 | esp_err_t esp_netif_set_dns_info(esp_netif_t *esp_netif, esp_netif_dns_type_t type, esp_netif_dns_info_t *dns);
+      |                                  ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:669:58: error: expected declaration specifiers or '...' before 'esp_netif_dns_type_t'
+  669 | esp_err_t esp_netif_set_dns_info(esp_netif_t *esp_netif, esp_netif_dns_type_t type, esp_netif_dns_info_t *dns);
+      |                                                          ^~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:669:85: error: expected declaration specifiers or '...' before 'esp_netif_dns_info_t'
+  669 | esp_err_t esp_netif_set_dns_info(esp_netif_t *esp_netif, esp_netif_dns_type_t type, esp_netif_dns_info_t *dns);
+      |                                                                                     ^~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:687:34: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  687 | esp_err_t esp_netif_get_dns_info(esp_netif_t *esp_netif, esp_netif_dns_type_t type, esp_netif_dns_info_t *dns);
+      |                                  ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:687:58: error: expected declaration specifiers or '...' before 'esp_netif_dns_type_t'
+  687 | esp_err_t esp_netif_get_dns_info(esp_netif_t *esp_netif, esp_netif_dns_type_t type, esp_netif_dns_info_t *dns);
+      |                                                          ^~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:687:85: error: expected declaration specifiers or '...' before 'esp_netif_dns_info_t'
+  687 | esp_err_t esp_netif_get_dns_info(esp_netif_t *esp_netif, esp_netif_dns_type_t type, esp_netif_dns_info_t *dns);
+      |                                                                                     ^~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:716:42: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  716 | esp_err_t esp_netif_create_ip6_linklocal(esp_netif_t *esp_netif);
+      |                                          ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:732:39: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  732 | esp_err_t esp_netif_get_ip6_linklocal(esp_netif_t *esp_netif, esp_ip6_addr_t *if_ip6);
+      |                                       ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:732:63: error: expected declaration specifiers or '...' before 'esp_ip6_addr_t'
+  732 | esp_err_t esp_netif_get_ip6_linklocal(esp_netif_t *esp_netif, esp_ip6_addr_t *if_ip6);
+      |                                                               ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:748:36: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  748 | esp_err_t esp_netif_get_ip6_global(esp_netif_t *esp_netif, esp_ip6_addr_t *if_ip6);
+      |                                    ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:748:60: error: expected declaration specifiers or '...' before 'esp_ip6_addr_t'
+  748 | esp_err_t esp_netif_get_ip6_global(esp_netif_t *esp_netif, esp_ip6_addr_t *if_ip6);
+      |                                                            ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:759:27: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  759 | int esp_netif_get_all_ip6(esp_netif_t *esp_netif, esp_ip6_addr_t if_ip6[]);
+      |                           ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:759:51: error: expected declaration specifiers or '...' before 'esp_ip6_addr_t'
+  759 | int esp_netif_get_all_ip6(esp_netif_t *esp_netif, esp_ip6_addr_t if_ip6[]);
+      |                                                   ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:771:29: error: expected declaration specifiers or '...' before 'esp_ip4_addr_t'
+  771 | void esp_netif_set_ip4_addr(esp_ip4_addr_t *addr, uint8_t a, uint8_t b, uint8_t c, uint8_t d);
+      |                             ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:783:30: error: type defaults to 'int' in declaration of 'esp_ip4_addr_t' [-Werror=implicit-int]
+  783 | char *esp_ip4addr_ntoa(const esp_ip4_addr_t *addr, char *buf, int buflen);
+      |                              ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:783:45: error: expected ';', ',' or ')' before '*' token
+  783 | char *esp_ip4addr_ntoa(const esp_ip4_addr_t *addr, char *buf, int buflen);
+      |                                             ^
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:804:49: error: expected declaration specifiers or '...' before 'esp_ip4_addr_t'
+  804 | esp_err_t esp_netif_str_to_ip4(const char *src, esp_ip4_addr_t *dst);
+      |                                                 ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:817:49: error: expected declaration specifiers or '...' before 'esp_ip6_addr_t'
+  817 | esp_err_t esp_netif_str_to_ip6(const char *src, esp_ip6_addr_t *dst);
+      |                                                 ^~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:839:1: error: expected declaration specifiers before 'esp_netif_iodriver_handle'
+  839 | esp_netif_iodriver_handle esp_netif_get_io_driver(esp_netif_t *esp_netif);
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:848:1: error: expected declaration specifiers before 'esp_netif_t'
+  848 | esp_netif_t *esp_netif_get_handle_from_ifkey(const char *if_key);
+      | ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:857:1: error: expected declaration specifiers before 'esp_netif_flags_t'
+  857 | esp_netif_flags_t esp_netif_get_flags(esp_netif_t *esp_netif);
+      | ^~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:866:33: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  866 | const char *esp_netif_get_ifkey(esp_netif_t *esp_netif);
+      |                                 ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:875:32: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  875 | const char *esp_netif_get_desc(esp_netif_t *esp_netif);
+      |                                ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:884:30: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  884 | int esp_netif_get_route_prio(esp_netif_t *esp_netif);
+      |                              ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:896:32: error: expected declaration specifiers or '...' before 'esp_netif_t'
+  896 | int32_t esp_netif_get_event_id(esp_netif_t *esp_netif, esp_netif_ip_event_type_t event_type);
+      |                                ^~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:896:56: error: expected declaration specifiers or '...' before 'esp_netif_ip_event_type_t'
+  896 | int32_t esp_netif_get_event_id(esp_netif_t *esp_netif, esp_netif_ip_event_type_t event_type);
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/esp/esp-idf/components/esp_netif/include/esp_netif.h:918:1: error: expected declaration specifiers before 'esp_netif_t'
+  918 | esp_netif_t *esp_netif_next(esp_netif_t *esp_netif);
+      | ^~~~~~~~~~~
+D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:11:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   11 | {
+      | ^
+In file included from C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:42,
+                 from D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:3:
+C:/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:353:6: error: old-style parameter declarations in prototyped function definition
+  353 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |      ^~~~~~~~~~~~~~~
+D:/VScode/Learn/esp-idf/mini-project/mini-project/main/main.c:23: error: expected '{' at end of input
+cc1.exe: some warnings being treated as errors
+ninja: build stopped: subcommand failed.
