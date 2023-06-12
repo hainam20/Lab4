@@ -28,8 +28,9 @@
 #include "ble_app.c"
 
 static const char *TAG = "MQTT_EXAMPLE";
-extern bool flag;
-char* MQTT_Data;
+
+uint8_t MQTT_Data[20];
+extern uint8_t write_data[20];
 
 esp_mqtt_client_handle_t client;
 
@@ -59,7 +60,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
     switch ((esp_mqtt_event_id_t)event_id) {
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
-        msg_id = esp_mqtt_client_publish(client, "/flespi/qos1", "data_3", 0, 1, 0);
+        msg_id = esp_mqtt_client_publish(client, "/flespi/qos1",(char *) write_data, 0, 1, 0);
         ESP_LOGI(TAG, "sent publish successful, msg_id=%d", msg_id);
 
         msg_id = esp_mqtt_client_subscribe(client, "/flespi/qos0", 0);
@@ -77,7 +78,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 
     case MQTT_EVENT_SUBSCRIBED:
         ESP_LOGI(TAG, "MQTT_EVENT_SUBSCRIBED, msg_id=%d", event->msg_id);
-        msg_id = esp_mqtt_client_publish(client, "/flespi/qos0",NULL, 0, 0, 0);
+        msg_id = esp_mqtt_client_publish(client, "/flespi/qos0",(char *) write_data, 0, 0, 0);
         ESP_LOGI(TAG, "sent publish successful, msg_id=%d", msg_id);
         break;
     case MQTT_EVENT_UNSUBSCRIBED:
@@ -90,7 +91,8 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         ESP_LOGI(TAG, "MQTT_EVENT_DATA");
         printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
         printf("DATA=%.*s\r\n", event->data_len, event->data);
-        MQTT_Data = event->data;
+        memcpy(MQTT_Data,event->data,event->data_len);
+        MQTT_Data[event->data_len] = '\0';
         break;
     case MQTT_EVENT_ERROR:
         ESP_LOGI(TAG, "MQTT_EVENT_ERROR");
@@ -139,22 +141,4 @@ void mqtt_stop(void)
     esp_mqtt_client_stop(client);
 }
 
-void process_data_from_mqtt()
-{
-    if (MQTT_Data != NULL) {
-        stop_wifi();
-        ble_start();
-        while (true)
-        {
-            if (flag == true)
-            {
-                vTaskDelay(pdMS_TO_TICKS(10000));
-                ble_stop();
-                printf("co flag: %d\n",flag);
-                break;
-            }
-
-        }     
-    }
-}
 

@@ -10,17 +10,33 @@
 #include "ble_app.h"
 #include "esp_mqtt.h"
 
-extern char* MQTT_Data;
-
-void task(void *pvParameters)
+extern uint8_t MQTT_Data[20];
+extern uint8_t write_data[20];
+extern bool flag;
+extern bool flag2;
+void task()
 {
-    wifi_start(); 
-    mqtt_start();
-    while (true)
+    ble_start(); 
+    while (1)
     {
-        if(MQTT_Data != NULL)
+        if(flag == true)
         {
-                process_data_from_mqtt();  
+                wifi_start();
+                mqtt_start();
+                vTaskDelay(pdMS_TO_TICKS(20000));
+                printf("MQTT_data: %s\n", MQTT_Data);
+                flag = false;
+                stop_wifi();
+                while (1)
+                {
+                    if (flag2 == true)
+                    {
+                        vTaskDelay(pdMS_TO_TICKS(10000));
+                        ble_stop();
+                        flag2 = false;
+                        break;
+                    }
+                }
                 break;
         }
     }
@@ -36,6 +52,7 @@ void app_main(void)
         ESP_ERROR_CHECK(nvs_flash_erase());
         ret = nvs_flash_init();
     }
-    xTaskCreate(&task, "task mqtt ble", 8192, NULL, 5, NULL);
-
+    // ble_start();
+    xTaskCreate(&task, "task_mqtt_ble", 8192, NULL, 5, NULL);
+    // task();
 }

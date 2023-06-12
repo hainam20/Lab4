@@ -10341,34 +10341,54 @@
                     {
                         "children": [
                             {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "depends_on": "BLE_MESH_SELF_TEST && BLE_MESH",
-                                        "help": "With this option enabled, an unprovisioned device can automatically\nenters mesh network using a specific test function without the pro-\nvisioning procedure. And on the Provisioner side, a test function\nneeds to be invoked to add the node information into the mesh stack.",
-                                        "id": "BLE_MESH_TEST_AUTO_ENTER_NETWORK",
-                                        "name": "BLE_MESH_TEST_AUTO_ENTER_NETWORK",
-                                        "range": null,
-                                        "title": "Unprovisioned device enters mesh network automatically",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "BLE_MESH_SELF_TEST && BLE_MESH",
-                                        "help": "With this option enabled, users can use white list to filter mesh\nadvertising packets while scanning.",
-                                        "id": "BLE_MESH_TEST_USE_WHITE_LIST",
-                                        "name": "BLE_MESH_TEST_USE_WHITE_LIST",
-                                        "range": null,
-                                        "title": "Use white list to filter mesh advertising packets",
-                                        "type": "bool"
-                                    }
-                                ],
+                                "children": [],
                                 "depends_on": "BLE_MESH",
                                 "help": "This option adds extra self-tests which are run every time BLE Mesh\nnetworking is initialized.",
                                 "id": "BLE_MESH_SELF_TEST",
                                 "name": "BLE_MESH_SELF_TEST",
                                 "range": null,
                                 "title": "Perform BLE Mesh self-tests",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "BLE_MESH_BQB_TEST && BLE_MESH",
+                                        "help": "This option is used to enable the log of auto-pts test.",
+                                        "id": "BLE_MESH_BQB_TEST_LOG",
+                                        "name": "BLE_MESH_BQB_TEST_LOG",
+                                        "range": null,
+                                        "title": null,
+                                        "type": "bool"
+                                    }
+                                ],
+                                "depends_on": "BLE_MESH",
+                                "help": "This option is used to enable some internal functions for auto-pts test.",
+                                "id": "BLE_MESH_BQB_TEST",
+                                "name": "BLE_MESH_BQB_TEST",
+                                "range": null,
+                                "title": "Enable BLE Mesh specific internal test",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "BLE_MESH_SELF_TEST && BLE_MESH",
+                                "help": "With this option enabled, an unprovisioned device can automatically\nenters mesh network using a specific test function without the pro-\nvisioning procedure. And on the Provisioner side, a test function\nneeds to be invoked to add the node information into the mesh stack.",
+                                "id": "BLE_MESH_TEST_AUTO_ENTER_NETWORK",
+                                "name": "BLE_MESH_TEST_AUTO_ENTER_NETWORK",
+                                "range": null,
+                                "title": "Unprovisioned device enters mesh network automatically",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "BLE_MESH_SELF_TEST && BLE_MESH",
+                                "help": "With this option enabled, users can use white list to filter mesh\nadvertising packets while scanning.",
+                                "id": "BLE_MESH_TEST_USE_WHITE_LIST",
+                                "name": "BLE_MESH_TEST_USE_WHITE_LIST",
+                                "range": null,
+                                "title": "Use white list to filter mesh advertising packets",
                                 "type": "bool"
                             },
                             {
@@ -12238,6 +12258,24 @@
                         "depends_on": null,
                         "id": "component-config-hardware-settings-sleep-config",
                         "title": "Sleep Config",
+                        "type": "menu"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "IDF_TARGET_ESP32C3",
+                                "help": "Its not able to stall ESP32C3 systimer in sleep.\nTo fix related RTOS TICK issue, select it to disable related systimer during sleep.\nTODO: IDF-7036",
+                                "id": "ESP_SLEEP_SYSTIMER_STALL_WORKAROUND",
+                                "name": "ESP_SLEEP_SYSTIMER_STALL_WORKAROUND",
+                                "range": null,
+                                "title": "ESP32C3 SYSTIMER Stall Issue Workaround",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": null,
+                        "id": "component-config-hardware-settings-esp_sleep_workaround",
+                        "title": "ESP_SLEEP_WORKAROUND",
                         "type": "menu"
                     },
                     {
@@ -17103,11 +17141,21 @@
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "If Enable tcpip\u3000core locking,Creates a global mutex that is held\nduring TCPIP thread operations.Can be locked by client code to perform\nlwIP operations without changing into TCPIP thread using callbacks.\nSee LOCK_TCPIP_CORE() and UNLOCK_TCPIP_CORE().\n\nIf disable tcpip\u3000core locking,TCP IP will perform tasks through context switching\uff0e",
+                        "help": "If Enable tcpip core locking,Creates a global mutex that is held\nduring TCPIP thread operations.Can be locked by client code to perform\nlwIP operations without changing into TCPIP thread using callbacks.\nSee LOCK_TCPIP_CORE() and UNLOCK_TCPIP_CORE().\n\nIf disable tcpip core locking,TCP IP will perform tasks through context switching",
                         "id": "LWIP_TCPIP_CORE_LOCKING",
                         "name": "LWIP_TCPIP_CORE_LOCKING",
                         "range": null,
                         "title": "Enable tcpip core locking",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable to check that the project does not violate lwip thread safety.\nIf enabled, all lwip functions that require thread awareness run an assertion\nto verify that the TCP/IP core functionality is either locked or accessed\nfrom the correct thread.",
+                        "id": "LWIP_CHECK_THREAD_SAFETY",
+                        "name": "LWIP_CHECK_THREAD_SAFETY",
+                        "range": null,
+                        "title": "Checks that lwip API runs in expected context",
                         "type": "bool"
                     },
                     {
@@ -21836,6 +21884,54 @@
                         "name": "USB_HOST_HW_BUFFER_BIAS",
                         "title": "Hardware FIFO size biasing",
                         "type": "choice"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "USB_OTG_SUPPORTED",
+                                "help": "On connection of a USB device, the USB 2.0 specification requires a \"debounce interval with a minimum\nduration of 100ms\" to allow the connection to stabilize (see USB 2.0 chapter 7.1.7.3 for more details).\nDuring the debounce interval, no new connection/disconnection events are registered.\n\nThe default value is set to 250 ms to be safe.",
+                                "id": "USB_HOST_DEBOUNCE_DELAY_MS",
+                                "name": "USB_HOST_DEBOUNCE_DELAY_MS",
+                                "range": null,
+                                "title": "Debounce delay in ms",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "USB_OTG_SUPPORTED",
+                                "help": "The reset signaling can be generated on any Hub or Host Controller port by request from the USB System\nSoftware. The USB 2.0 specification requires that \"the reset signaling must be driven for a minimum of\n10ms\" (see USB 2.0 chapter 7.1.7.5 for more details).  After the reset, the hub port will transition to\nthe Enabled state (refer to Section 11.5).\n\nThe default value is set to 30 ms to be safe.",
+                                "id": "USB_HOST_RESET_HOLD_MS",
+                                "name": "USB_HOST_RESET_HOLD_MS",
+                                "range": null,
+                                "title": "Reset hold in ms",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "USB_OTG_SUPPORTED",
+                                "help": "After a port stops driving the reset signal, the USB 2.0 specification requires that the \"USB System\nSoftware guarantees a minimum of 10 ms for reset recovery\" before the attached device is expected to\nrespond to data transfers (see USB 2.0 chapter 7.1.7.3 for more details). The device may ignore any\ndata transfers during the recovery interval.\n\nThe default value is set to 30 ms to be safe.",
+                                "id": "USB_HOST_RESET_RECOVERY_MS",
+                                "name": "USB_HOST_RESET_RECOVERY_MS",
+                                "range": null,
+                                "title": "Reset recovery delay in ms",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "USB_OTG_SUPPORTED",
+                                "help": "\"After successful completion of the Status stage, the device is allowed a SetAddress() recovery\ninterval of 2 ms. At the end of this interval, the device must be able to accept Setup packets\naddressed to the new address. Also, at the end of the recovery interval, the device must not respond to\ntokens sent to the old address (unless, of course, the old and new address is the same).\" See USB 2.0\nchapter 9.2.6.3 for more details.\n\nThe default value is set to 10 ms to be safe.",
+                                "id": "USB_HOST_SET_ADDR_RECOVERY_MS",
+                                "name": "USB_HOST_SET_ADDR_RECOVERY_MS",
+                                "range": null,
+                                "title": "SetAddress() recovery time in ms",
+                                "type": "int"
+                            }
+                        ],
+                        "depends_on": null,
+                        "id": "component-config-usb-otg-root-hub-configuration",
+                        "title": "Root Hub configuration",
+                        "type": "menu"
                     }
                 ],
                 "depends_on": null,

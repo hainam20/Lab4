@@ -7,7 +7,7 @@
     "bootloader_elf":     "D:/VScode/Learn/esp-idf/mini-project/mini-project/build/bootloader/bootloader.elf",
     "app_elf":            "mini-project.elf",
     "app_bin":            "mini-project.bin",
-    "git_revision":       "v5.0.1-397-g3050ea656f-dirty",
+    "git_revision":       "v5.0.2",
     "target":             "esp32",
     "rev":                "0",
     "min_rev":            "0",

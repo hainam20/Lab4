@@ -33,6 +33,13 @@
         "esp_gap_ble_api.h": "c",
         "system_error": "c",
         "semphr.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "sockets.h": "c",
+        "*.tcc": "c",
+        "ratio": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c"
     }
 }
